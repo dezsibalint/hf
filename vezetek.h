@@ -5,12 +5,11 @@
 #ifndef ARAMKOR_VEZETEK_H
 #define ARAMKOR_VEZETEK_H
 #include "aramkorielem.h"
-
 class vezetek: public aramkorielem{
 
 public:
     vezetek(): aramkorielem(2,"vezetek"){}
-
+   void connect(uzenet &mit);///Amint csatlakoztatjuk kiküldi a kimenetére azt ami a bemenetén van.
 };
 
 

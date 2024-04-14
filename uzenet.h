@@ -13,15 +13,17 @@ bool value;
 public:
     ///Default konstruktor
     uzenet(){defined= false;}
+
     ///Setter
-    void setval(bool val){value=val;defined= true;}
+    void setval(bool val);
+
     //Getter
-    bool getval(){return value;}
-    bool isdefined(){return defined;}///Be lett már állítva állapotba vagy még undefined
-    uzenet&operator+(uzenet&rhs){
-        value=value+rhs.value;
-        return *this;
-    }
+    bool getval()const;
+
+    bool isdefined()const;///Be lett már állítva állapotba vagy még undefined
+
+    uzenet&operator+(uzenet&rhs);
+
     void kiir()const{std::cout<<value;}//tesztelési cél
 };
 

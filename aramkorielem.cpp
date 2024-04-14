@@ -4,7 +4,19 @@
 
 #include "aramkorielem.h"
 
-void aramkorielem::connect(aramkorielem&mit, int hova) {
+void aramkorielem::setout(uzenet &to_out) {
+    kimenet=to_out;
+}
+
+uzenet &aramkorielem::out() {
+    return kimenet;
+}
+
+void aramkorielem::connect(uzenet &mit, int hova) {
     if(hova>=labakszama) throw "Nem létező láb";
-    allapot[hova]=mit.allapot[mit.labakszama-1];
+    bemenetek[hova]=mit;
+}
+
+uzenet aramkorielem::getlaball(int hanyas)const {
+        return bemenetek[hanyas];
 }

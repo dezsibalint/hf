@@ -6,22 +6,34 @@
 #define ARAMKOR_ARAMKORIELEM_H
 #include "uzenet.h"
 #include "cstring"
+#include "memtrace.h"
 ///Absztrakt ősosztály
 class aramkorielem {
     char nev[20];
     int labakszama;
-    uzenet *allapot=new uzenet[labakszama]; /// Minden lábnak van saját állapota. az utolsó láb a kimeneti láb
-  //  connection*conn=new connection[labakszama];
+    uzenet *bemenetek=new uzenet[labakszama-1];/// Minden lábnak van saját állapota.
+    uzenet kimenet;
 public:
-    aramkorielem():labakszama(0){}
+    aramkorielem():labakszama(0){} ///Default konsturktor
+
     aramkorielem(int l,char *n):labakszama(l){ strcpy(nev,n);}
- //   virtual ~aramkorielem()=0;
-    virtual void connect(aramkorielem& mit,int hova);
-    char* miez() {return nev;}
-    void setout(uzenet to_out){
-        allapot[labakszama-1]=to_out;
+
+    virtual ~aramkorielem(){delete[]bemenetek;}
+   virtual  void connect(uzenet &mit,int hova);
+
+    int getlab(){return labakszama;}
+
+    virtual void setout(uzenet &to_out);
+
+    uzenet &out();  ///Nem lehet konstans,hiszen azzal a kimenettel fogunk tovább dolgozni,hogy ne másoldójon az adat.
+
+    uzenet getlaball(int hanyas)const;
+
+    void print()const{ ///Ez csak kezdeti debug cél,hogy lássam mit is csinálok
+        std::cout<<"A kimenet állapota: ";
+        kimenet.kiir();
     }
-    uzenet getuz(int hanyaslab){return allapot[hanyaslab];}
+
 };
 
 

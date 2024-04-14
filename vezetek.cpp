@@ -3,3 +3,8 @@
 //
 
 #include "vezetek.h"
+
+void vezetek::connect(uzenet &mit) {
+
+        this->setout(mit);
+}
