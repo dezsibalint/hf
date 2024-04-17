@@ -7,9 +7,10 @@
 
 #include "aramkorielem.h"
 #include "iostream"
+#include "memtrace.h"
 class forras: public aramkorielem{
 public:
-    forras(): aramkorielem(1,"forras"){
+    forras(): aramkorielem(0,"forras"){ ///A forrásnak nincs áramköri bemenete csak kimenete,mi állítjuk be az értékét
         std::cout<<"Bemenet:";
         bool be;
         std::cin>>be;
@@ -17,6 +18,7 @@ public:
         ou.setval(be);
         setout(ou);
     }
+    void print() const override;
 };
 
 

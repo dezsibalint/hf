@@ -10,29 +10,29 @@
 ///Absztrakt ősosztály
 class aramkorielem {
     char nev[20];
-    int labakszama;
-    uzenet *bemenetek=new uzenet[labakszama-1];/// Minden lábnak van saját állapota.
+    int bemenetekszama;
+    const static int kimenetszam=1;
+    uzenet *bemenetek=new uzenet[bemenetekszama];/// Minden lábnak van saját állapota.
     uzenet kimenet;
 public:
-    aramkorielem():labakszama(0){} ///Default konsturktor
+    aramkorielem():bemenetekszama(0){} ///Default konsturktor
 
-    aramkorielem(int l,char *n):labakszama(l){ strcpy(nev,n);}
+    aramkorielem(int l,char *n):bemenetekszama(l){ strcpy(nev,n);}
 
     virtual ~aramkorielem(){delete[]bemenetek;}
-   virtual  void connect(uzenet &mit,int hova);
 
-    int getlab(){return labakszama;}
+    virtual  void connect(uzenet &mit,int hova);
+
+    int inputdb()const {return bemenetekszama;}
 
     virtual void setout(uzenet &to_out);
 
     uzenet &out();  ///Nem lehet konstans,hiszen azzal a kimenettel fogunk tovább dolgozni,hogy ne másoldójon az adat.
 
-    uzenet getlaball(int hanyas)const;
+    uzenet getout()const{return kimenet;}
+    uzenet getinput(int hanyas)const;
 
-    void print()const{ ///Ez csak kezdeti debug cél,hogy lássam mit is csinálok
-        std::cout<<"A kimenet állapota: ";
-        kimenet.kiir();
-    }
+   virtual void print()const=0; //Ebből akarok pure virtualt csinálni mindenkinek lesz saját printje !
 
 };
 

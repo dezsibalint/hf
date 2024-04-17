@@ -9,8 +9,8 @@ void norgate::connect(uzenet &mit, int hova) {
     uzenet u;
     u.setval(true);
     setout(u);
-    for (int i = 0; i < getlab(); ++i) {
-        if(getlaball(i).isdefined()&& getlaball(i).getval()) {
+    for (int i = 0; i < inputdb(); ++i) {
+        if(getinput(i).isdefined()&& getinput(i).getval()) {
             uzenet out;
             out.setval(false);
             setout(out);
@@ -18,5 +18,12 @@ void norgate::connect(uzenet &mit, int hova) {
         }
     }
 
+}
+
+void norgate::print() const {
+    for (int i = 0; i < inputdb(); ++i) {
+        std::cout<<"A norkapu"<<i+1<< ".bememenetének állapota: "<< this->getinput(i)<<std::endl;
+    }
+    std::cout<<"A norkpu kimenetének állapota: "<<this->getout()<<std::endl;
 
 }

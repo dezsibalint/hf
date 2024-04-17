@@ -3,3 +3,7 @@
 //
 
 #include "forras.h"
+
+
+void forras::print() const {std::cout<<"A forrás kimenetének állapota: "<<this->getout()<<std::endl;
+}

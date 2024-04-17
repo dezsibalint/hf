@@ -13,10 +13,10 @@ uzenet &aramkorielem::out() {
 }
 
 void aramkorielem::connect(uzenet &mit, int hova) {
-    if(hova>=labakszama) throw "Nem létező láb";
+    if(hova>bemenetekszama) throw "Nem létező láb";
     bemenetek[hova]=mit;
 }
 
-uzenet aramkorielem::getlaball(int hanyas)const {
+uzenet aramkorielem::getinput(int hanyas)const {
         return bemenetek[hanyas];
 }
