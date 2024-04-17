@@ -1,3 +1,0 @@
-/home/dezsibalint/repos/aramkor/cmake-build-debug/CMakeFiles/aramkor.dir
-/home/dezsibalint/repos/aramkor/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/dezsibalint/repos/aramkor/cmake-build-debug/CMakeFiles/rebuild_cache.dir
