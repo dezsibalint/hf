@@ -112,6 +112,13 @@ build CMakeFiles/aramkor.dir/memtrace.cpp.o: CXX_COMPILER__aramkor_unscanned_Deb
   OBJECT_DIR = CMakeFiles/aramkor.dir
   OBJECT_FILE_DIR = CMakeFiles/aramkor.dir
 
+build CMakeFiles/aramkor.dir/halozat.cpp.o: CXX_COMPILER__aramkor_unscanned_Debug /home/dezsibalint/repos/aramkor/halozat.cpp || cmake_object_order_depends_target_aramkor
+  DEFINES = -DMEMTRACE
+  DEP_FILE = CMakeFiles/aramkor.dir/halozat.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/aramkor.dir
+  OBJECT_FILE_DIR = CMakeFiles/aramkor.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target aramkor
@@ -120,7 +127,7 @@ build CMakeFiles/aramkor.dir/memtrace.cpp.o: CXX_COMPILER__aramkor_unscanned_Deb
 #############################################
 # Link the executable aramkor
 
-build aramkor: CXX_EXECUTABLE_LINKER__aramkor_Debug CMakeFiles/aramkor.dir/main.cpp.o CMakeFiles/aramkor.dir/uzenet.cpp.o CMakeFiles/aramkor.dir/aramkorielem.cpp.o CMakeFiles/aramkor.dir/vezetek.cpp.o CMakeFiles/aramkor.dir/forras.cpp.o CMakeFiles/aramkor.dir/norgate.cpp.o CMakeFiles/aramkor.dir/kombhal.cpp.o CMakeFiles/aramkor.dir/invereter.cpp.o CMakeFiles/aramkor.dir/memtrace.cpp.o
+build aramkor: CXX_EXECUTABLE_LINKER__aramkor_Debug CMakeFiles/aramkor.dir/main.cpp.o CMakeFiles/aramkor.dir/uzenet.cpp.o CMakeFiles/aramkor.dir/aramkorielem.cpp.o CMakeFiles/aramkor.dir/vezetek.cpp.o CMakeFiles/aramkor.dir/forras.cpp.o CMakeFiles/aramkor.dir/norgate.cpp.o CMakeFiles/aramkor.dir/kombhal.cpp.o CMakeFiles/aramkor.dir/invereter.cpp.o CMakeFiles/aramkor.dir/memtrace.cpp.o CMakeFiles/aramkor.dir/halozat.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/aramkor.dir
   POST_BUILD = :

@@ -5,6 +5,7 @@
 #ifndef ARAMKOR_UZENET_H
 #define ARAMKOR_UZENET_H
 #include "iostream"
+#include "memtrace.h"
 ///Üzenet osztály
 class uzenet {
     ///Value ha false=0 ha true=1
@@ -26,6 +27,6 @@ public:
 
     void kiir()const{std::cout<<value;}//tesztelési cél
 };
-
+std::ostream &operator<<(std::ostream &os,const uzenet&ob);
 
 #endif //ARAMKOR_UZENET_H

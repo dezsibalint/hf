@@ -20,3 +20,9 @@ uzenet &uzenet::operator+(uzenet &rhs) {
     value=value+rhs.value;
     return *this;
 }
+std::ostream &operator<<(std::ostream &os,const uzenet&ob){
+    if(ob.isdefined()){
+        return os<<ob.getval();
+
+    } else return os<<"Nem definiált";
+}

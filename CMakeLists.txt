@@ -19,5 +19,7 @@ add_executable(aramkor main.cpp
         invereter.cpp
         invereter.h
         memtrace.cpp
-        memtrace.h)
+        memtrace.h
+        halozat.cpp
+        halozat.h)
 
