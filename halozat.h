@@ -6,17 +6,19 @@
 #define ARAMKOR_HALOZAT_H
 #include "aramkorielem.h"
 
-/*class halozatitarolo {
+class halozatitarolo {
     aramkorielem* elem;
 public:
     halozatitarolo():elem(NULL){}
     void add(aramkorielem*a){elem=a;}
-    int inputs()const{return elem->inputdb();}
-    uzenet &output(){return elem->out();}
-    void conn(uzenet&mit,int hova){if(elem!=NULL)elem->connect(mit,hova);}
+    aramkorielem*get(){return elem;}
+    void conn(aramkorielem *kit, int hova){
+        if(elem!=NULL&& elem->inputdb()>0) elem->connect(kit->out(),hova);
+    }
     void print(){elem->print();}
+~halozatitarolo(){if(elem!=NULL)delete elem;}
 };
-*/
+
 
 
 #endif //ARAMKOR_HALOZAT_H
