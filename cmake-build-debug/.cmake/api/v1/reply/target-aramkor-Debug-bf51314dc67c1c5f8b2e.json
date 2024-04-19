@@ -198,12 +198,12 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "kombhal.cpp",
+			"path" : "teszthalozat.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "kombhal.h",
+			"path" : "teszthalozat.h",
 			"sourceGroupIndex" : 1
 		},
 		{

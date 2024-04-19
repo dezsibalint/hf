@@ -4,7 +4,7 @@
 #include "vezetek.h"
 #include "norgate.h"
 #include "invereter.h"
-#include "kombhal.h"
+#include "teszthalozat.h"
 #include "memtrace.h"
 #include "halozat.h"
 int main() {
@@ -18,7 +18,7 @@ int main() {
     invereter i;
     i.connect(n.out(),0);
 */
-   kombhal a;
+   teszthalozat a;
    a.start();
 
 

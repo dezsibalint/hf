@@ -2,8 +2,8 @@
 // Created by dezsibalint on 2024.04.10..
 //
 
-#ifndef ARAMKOR_KOMBHAL_H
-#define ARAMKOR_KOMBHAL_H
+#ifndef ARAMKOR_TESZTHALOZAT_H
+#define ARAMKOR_TESZTHALOZAT_H
 #include "aramkorielem.h"
 #include "vezetek.h"
 #include "forras.h"
@@ -11,10 +11,10 @@
 #include "invereter.h"
 #include "memtrace.h"
 #include "halozat.h"
-class kombhal {
+class teszthalozat {
     halozatitarolo halozat[9];
 public:
-        kombhal()
+        teszthalozat()
         {
             halozat[0].add(new invereter());
             halozat[1].add(new invereter());
@@ -45,4 +45,4 @@ void start(){
 
 };
 
-#endif //ARAMKOR_KOMBHAL_H
+#endif //ARAMKOR_TESZTHALOZAT_H

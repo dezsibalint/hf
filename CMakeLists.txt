@@ -14,8 +14,8 @@ add_executable(aramkor main.cpp
         forras.h
         norgate.cpp
         norgate.h
-        kombhal.cpp
-        kombhal.h
+        teszthalozat.cpp
+        teszthalozat.h
         invereter.cpp
         invereter.h
         memtrace.cpp
