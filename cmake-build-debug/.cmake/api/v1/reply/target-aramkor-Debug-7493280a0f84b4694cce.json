@@ -128,8 +128,7 @@
 				10,
 				12,
 				14,
-				16,
-				18
+				16
 			]
 		}
 	],
@@ -234,11 +233,6 @@
 			"compileGroupIndex" : 0,
 			"path" : "halozat.cpp",
 			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "halozat.h",
-			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"
