@@ -12,18 +12,18 @@
 #include "memtrace.h"
 #include "halozat.h"
 class teszthalozat {
+    size_t meret=9;
     halozatitarolo halozat[9];
 public:
         teszthalozat()
         {
-            halozat[0].add(new invereter());
-            halozat[1].add(new invereter());
-            halozat[2].add(new invereter());
-            halozat[3].add(new forras());
-            halozat[4].add(new forras());
-            halozat[5].add(new forras());
-            halozat[6].add(new forras());
-            halozat[7].add(new forras());
+
+            for (int i = 0; i < 3  ; ++i) {
+                halozat[i].add(new invereter());
+            }
+            for (int i = 3; i <8 ; ++i) {
+                halozat[i].add(new forras());
+            }
             halozat[8].add(new norgate(5));
         }
 

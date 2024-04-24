@@ -10,8 +10,8 @@ class invereter: public aramkorielem{
 
 public:
     invereter(): aramkorielem(1,"Inverter"){} ///Inverternek csak 1 bemenete van
-    void connect(uzenet &mit, int hova) override;
-    void print() const override;
+    void connect(uzenet &mit, int hova=0) override;
+void print(std::ostream &os = std::cout) const override;
 };
 std::ostream &operator<<(std::ostream os,invereter&ob);
 

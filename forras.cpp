@@ -5,5 +5,5 @@
 #include "forras.h"
 
 
-void forras::print() const {std::cout<<"A forrás kimenetének állapota: "<<this->getout()<<std::endl;
+void forras::print(std::ostream&os) const {os<<"A forrás kimenetének állapota: "<<this->getout()<<std::endl;
 }

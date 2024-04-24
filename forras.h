@@ -8,17 +8,29 @@
 #include "aramkorielem.h"
 #include "iostream"
 #include "memtrace.h"
+#include "stdexcept"
 class forras: public aramkorielem{
 public:
-    forras(): aramkorielem(0,"forras"){ ///A forrásnak nincs áramköri bemenete csak kimenete,mi állítjuk be az értékét
-        std::cout<<"Bemenet:";
-        bool be;
-        std::cin>>be;
-        uzenet ou;
-        ou.setval(be);
-        setout(ou);
+    forras(std::ostream &os=std::cout,std::istream &is=std::cin): aramkorielem(0,"Forras") { ///A forrásnak nincs áramköri bemenete csak kimenete,mi állítjuk be az értékét
+        int be;
+        os << "Bemenet:";
+
+
+        if (be == 0 || be == 1) {
+            is>>be;
+            uzenet ou;
+            ou.setval(be);
+            setout(ou);
+        } else throw std::invalid_argument("Nem megfelelő bemenet");
     }
-    void print() const override;
+    forras(int be):aramkorielem(0,"Forras"){
+        if (be == 0 || be == 1) {
+            uzenet ou;
+            ou.setval(be);
+            setout(ou);
+        } else throw std::invalid_argument("Nem megfelelő bemenet");
+    }
+  void print(std::ostream &os = std::cout) const override;
 };
 
 

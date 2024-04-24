@@ -10,9 +10,9 @@
 class norgate:public aramkorielem {
 
 public:
-    norgate(int bemenetek): aramkorielem(bemenetek,"NORKAPU"){}
+    norgate(int bemenetek): aramkorielem(bemenetek,"Norgate"){}
     void connect(uzenet &mit, int hova) override;
-    void print() const override;
+    void print(std::ostream &os = std::cout) const override;
 };
 
 

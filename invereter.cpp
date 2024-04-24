@@ -14,7 +14,7 @@ void invereter::connect(uzenet &mit, int hova) {
     }
 }
 
-void invereter::print() const {
-   std::cout<<"Az inverter bememenetének állapota: "<< this->getinput(0)<<" Az inverter kimenetének állapota: "<<this->getout()<<std::endl;
+void invereter::print(std::ostream&os) const {
+   os<<"Az inverter bememenetének állapota: "<< this->getinput(0)<<" Az inverter kimenetének állapota: "<<this->getout()<<std::endl;
 }
 

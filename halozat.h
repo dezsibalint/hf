@@ -15,6 +15,7 @@ public:
     void conn(aramkorielem *kit, int hova){
         if(elem!=NULL&& elem->inputdb()>0) elem->connect(kit->out(),hova);
     }
+
     void print()const {elem->print();}
 ~halozatitarolo(){if(elem!=NULL)delete elem;}
 };

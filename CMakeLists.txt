@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.27)
 project(aramkor)
 
 set(CMAKE_CXX_STANDARD 17)
-add_compile_definitions(-DMEMTRACE)
+
 add_executable(aramkor main.cpp
         uzenet.cpp
         uzenet.h

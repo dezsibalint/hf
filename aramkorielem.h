@@ -32,7 +32,9 @@ public:
     uzenet getout()const{return kimenet;}
     uzenet getinput(int hanyas)const;
 
-   virtual void print()const=0; //Ebből akarok pure virtualt csinálni mindenkinek lesz saját printje !
+   virtual void print(std::ostream &os=std::cout)const=0;
+
+   char*getnev() {return nev;}
 
 };
 

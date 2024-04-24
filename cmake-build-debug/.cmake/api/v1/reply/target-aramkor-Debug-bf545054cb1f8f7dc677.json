@@ -10,8 +10,7 @@
 	{
 		"commands" : 
 		[
-			"add_executable",
-			"add_compile_definitions"
+			"add_executable"
 		],
 		"files" : 
 		[
@@ -27,12 +26,6 @@
 				"file" : 0,
 				"line" : 6,
 				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
-				"line" : 5,
-				"parent" : 0
 			}
 		]
 	},
@@ -43,13 +36,6 @@
 			[
 				{
 					"fragment" : "-g -fdiagnostics-color=always"
-				}
-			],
-			"defines" : 
-			[
-				{
-					"backtrace" : 2,
-					"define" : "MEMTRACE"
 				}
 			],
 			"language" : "CXX",

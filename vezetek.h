@@ -9,9 +9,9 @@
 class vezetek: public aramkorielem{
 
 public:
-    vezetek(): aramkorielem(1,"vezetek"){} ///Vezetéknek 1 bemenete van.
+    vezetek(): aramkorielem(1,"Vezetek"){} ///Vezetéknek 1 bemenete van.
    void connect(uzenet &mit);///Amint csatlakoztatjuk kiküldi a kimenetére azt ami a bemenetén van.
-   void print() const override;
+void print(std::ostream &os = std::cout) const override;
 };
 
 

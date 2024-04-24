@@ -50,70 +50,60 @@ cmake_ninja_workdir = /home/dezsibalint/repos/aramkor/cmake-build-debug/
 build cmake_object_order_depends_target_aramkor: phony || CMakeFiles/aramkor.dir
 
 build CMakeFiles/aramkor.dir/main.cpp.o: CXX_COMPILER__aramkor_unscanned_Debug /home/dezsibalint/repos/aramkor/main.cpp || cmake_object_order_depends_target_aramkor
-  DEFINES = -DMEMTRACE
   DEP_FILE = CMakeFiles/aramkor.dir/main.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/aramkor.dir
   OBJECT_FILE_DIR = CMakeFiles/aramkor.dir
 
 build CMakeFiles/aramkor.dir/uzenet.cpp.o: CXX_COMPILER__aramkor_unscanned_Debug /home/dezsibalint/repos/aramkor/uzenet.cpp || cmake_object_order_depends_target_aramkor
-  DEFINES = -DMEMTRACE
   DEP_FILE = CMakeFiles/aramkor.dir/uzenet.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/aramkor.dir
   OBJECT_FILE_DIR = CMakeFiles/aramkor.dir
 
 build CMakeFiles/aramkor.dir/aramkorielem.cpp.o: CXX_COMPILER__aramkor_unscanned_Debug /home/dezsibalint/repos/aramkor/aramkorielem.cpp || cmake_object_order_depends_target_aramkor
-  DEFINES = -DMEMTRACE
   DEP_FILE = CMakeFiles/aramkor.dir/aramkorielem.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/aramkor.dir
   OBJECT_FILE_DIR = CMakeFiles/aramkor.dir
 
 build CMakeFiles/aramkor.dir/vezetek.cpp.o: CXX_COMPILER__aramkor_unscanned_Debug /home/dezsibalint/repos/aramkor/vezetek.cpp || cmake_object_order_depends_target_aramkor
-  DEFINES = -DMEMTRACE
   DEP_FILE = CMakeFiles/aramkor.dir/vezetek.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/aramkor.dir
   OBJECT_FILE_DIR = CMakeFiles/aramkor.dir
 
 build CMakeFiles/aramkor.dir/forras.cpp.o: CXX_COMPILER__aramkor_unscanned_Debug /home/dezsibalint/repos/aramkor/forras.cpp || cmake_object_order_depends_target_aramkor
-  DEFINES = -DMEMTRACE
   DEP_FILE = CMakeFiles/aramkor.dir/forras.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/aramkor.dir
   OBJECT_FILE_DIR = CMakeFiles/aramkor.dir
 
 build CMakeFiles/aramkor.dir/norgate.cpp.o: CXX_COMPILER__aramkor_unscanned_Debug /home/dezsibalint/repos/aramkor/norgate.cpp || cmake_object_order_depends_target_aramkor
-  DEFINES = -DMEMTRACE
   DEP_FILE = CMakeFiles/aramkor.dir/norgate.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/aramkor.dir
   OBJECT_FILE_DIR = CMakeFiles/aramkor.dir
 
 build CMakeFiles/aramkor.dir/teszthalozat.cpp.o: CXX_COMPILER__aramkor_unscanned_Debug /home/dezsibalint/repos/aramkor/teszthalozat.cpp || cmake_object_order_depends_target_aramkor
-  DEFINES = -DMEMTRACE
   DEP_FILE = CMakeFiles/aramkor.dir/teszthalozat.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/aramkor.dir
   OBJECT_FILE_DIR = CMakeFiles/aramkor.dir
 
 build CMakeFiles/aramkor.dir/invereter.cpp.o: CXX_COMPILER__aramkor_unscanned_Debug /home/dezsibalint/repos/aramkor/invereter.cpp || cmake_object_order_depends_target_aramkor
-  DEFINES = -DMEMTRACE
   DEP_FILE = CMakeFiles/aramkor.dir/invereter.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/aramkor.dir
   OBJECT_FILE_DIR = CMakeFiles/aramkor.dir
 
 build CMakeFiles/aramkor.dir/memtrace.cpp.o: CXX_COMPILER__aramkor_unscanned_Debug /home/dezsibalint/repos/aramkor/memtrace.cpp || cmake_object_order_depends_target_aramkor
-  DEFINES = -DMEMTRACE
   DEP_FILE = CMakeFiles/aramkor.dir/memtrace.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/aramkor.dir
   OBJECT_FILE_DIR = CMakeFiles/aramkor.dir
 
 build CMakeFiles/aramkor.dir/halozat.cpp.o: CXX_COMPILER__aramkor_unscanned_Debug /home/dezsibalint/repos/aramkor/halozat.cpp || cmake_object_order_depends_target_aramkor
-  DEFINES = -DMEMTRACE
   DEP_FILE = CMakeFiles/aramkor.dir/halozat.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/aramkor.dir
