@@ -17,7 +17,7 @@ class aramkorielem {
 public:
     aramkorielem():bemenetekszama(0){} ///Default konsturktor
 
-    aramkorielem(int l,char *n):bemenetekszama(l){ strcpy(nev,n);}
+    aramkorielem(int l,const char *n):bemenetekszama(l){ strcpy(nev,n);}
 
     virtual ~aramkorielem(){delete[]bemenetek;}
 

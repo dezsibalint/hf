@@ -17,3 +17,12 @@
 892	960	1713964662498411241	aramkor	bf4d5010fd2763b6
 3	754	1713964686286566227	CMakeFiles/aramkor.dir/main.cpp.o	99532bbbb7243060
 755	815	1713964686346566618	aramkor	bf4d5010fd2763b6
+3	335	1714033439592431067	CMakeFiles/aramkor.dir/teszthalozat.cpp.o	cfb6d229f1428cce
+3	335	1714033439592431067	CMakeFiles/aramkor.dir/invereter.cpp.o	4a020db619be95e6
+3	366	1714033439624431688	CMakeFiles/aramkor.dir/halozat.cpp.o	960d5cc51de7f5ae
+2	370	1714033439628431766	CMakeFiles/aramkor.dir/forras.cpp.o	74ebbc8c3fcde8c5
+2	370	1714033439628431766	CMakeFiles/aramkor.dir/aramkorielem.cpp.o	76dd891399b06185
+2	370	1714033439628431766	CMakeFiles/aramkor.dir/vezetek.cpp.o	f473f49d5337a66e
+3	392	1714033439648432154	CMakeFiles/aramkor.dir/norgate.cpp.o	21cf268c0ad92bed
+2	761	1714033440016439292	CMakeFiles/aramkor.dir/main.cpp.o	99532bbbb7243060
+761	818	1714033440072440379	aramkor	bf4d5010fd2763b6
