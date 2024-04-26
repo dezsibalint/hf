@@ -4,6 +4,5 @@
 
 #include "forras.h"
 
-
-void forras::print(std::ostream&os) const {os<<"A forrás kimenetének állapota: "<<this->getout()<<std::endl;
-}
+///Csak a kimenetet írjuk ki mert a forrásnak nincs bemenete.
+void forras::print(std::ostream&os) const {os<<"A forrás kimenetének állapota: "<<this->getout()<<std::endl;}

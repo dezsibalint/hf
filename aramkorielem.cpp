@@ -3,7 +3,7 @@
 //
 
 #include "aramkorielem.h"
-
+#include "stdexcept"
 void aramkorielem::setout(uzenet &to_out) {
     kimenet=to_out;
 }
@@ -13,8 +13,9 @@ uzenet &aramkorielem::out() {
 }
 
 void aramkorielem::connect(uzenet &mit, int hova) {
-    if(hova>bemenetekszama) throw "Nem létező láb";
-    bemenetek[hova]=mit;
+    //Létezik-e a láb
+    if(hova>bemenetekszama) throw std::invalid_argument("Nincs ilyen bemenet!");
+    bemenetek[hova]=mit;//Bemenet beállítása
 }
 
 uzenet aramkorielem::getinput(int hanyas)const {

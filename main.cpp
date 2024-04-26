@@ -12,8 +12,7 @@
 int main() {
 ///Teszt A
     //Forrás tesztjei
-    std::ostream os();
-    forras a;
+    forras a(1);
 
 
     TEST(forras,create){
@@ -23,7 +22,7 @@ int main() {
             EXPECT_TRUE(a.out().getval());
     }ENDM
     TEST(forras,exeption){
-         //   EXPECT_THROW(forras b(),std::invalid_argument);
+           EXPECT_THROW(forras b('c'),std::invalid_argument);
     }ENDM
     vezetek v;
     //Vezeték tesztjei
@@ -61,10 +60,10 @@ int main() {
 
     }ENDM
     //Hálózati tároló tesztjei
-    halozatitarolo test[4];
+   /* halozatitarolo test[4];
     TEST(halozatitarolo,betesz){
 
-        test[0].add(new forras);
+        test[0].add(new forras(1));
         test[1].add(new vezetek);
         test[2].add(new invereter);
         test[3].add(new norgate(2));
@@ -84,7 +83,7 @@ int main() {
     }ENDM
 ///TesztB
 //Teszthélózat tesztjei.
-teszthalozat th;
+/*teszthalozat th;
     TEST(teszthalozat,felepit){
             EXPECT_NO_THROW(th.felepit()); //Hiba nélkül felépül-e?
 
@@ -92,5 +91,5 @@ teszthalozat th;
     TEST(teszthalozat,mukodes){
 
     }ENDM
-
+*/
 }

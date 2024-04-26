@@ -6,12 +6,21 @@
 #define ARAMKOR_VEZETEK_H
 #include "aramkorielem.h"
 #include "memtrace.h"
-class vezetek: public aramkorielem{
 
+///Vezeték osztály
+///Egyszerű a működése 1 bemenet 1 kimenet, ami a bemenetén van azt továbbítja a kimenetére.
+class vezetek: public aramkorielem{
 public:
-    vezetek(): aramkorielem(1,"Vezetek"){} ///Vezetéknek 1 bemenete van.
+    ///Konstruktor
+    vezetek(): aramkorielem(1,"Vezetek"){} //Vezetéknek 1 bemenete van.
+
+    ///Connect függvény
+    ///@param mit Bemenet állapota
    void connect(uzenet &mit);///Amint csatlakoztatjuk kiküldi a kimenetére azt ami a bemenetén van.
-void print(std::ostream &os = std::cout) const override;
+
+   ///Print függvény
+   ///@param os Hova írjuk ki
+   void print(std::ostream &os = std::cout) const override;
 };
 
 

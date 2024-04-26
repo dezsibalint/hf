@@ -11,35 +11,21 @@
 #include "invereter.h"
 #include "memtrace.h"
 #include "halozat.h"
+///Teszthálózat osztály, csak a heterogén tároló bemutatása miatt.
+///@tparam meret: Tároló mérete,azaz hány db áramköri elemet tárolhat.
+///@tparam halozat: Heterogén tároló, amely az áramköri elemeket tárolja.
 class teszthalozat {
     size_t meret=9;
     halozatitarolo halozat[9];
 public:
-        teszthalozat()
-        {
+    ///konstruktor
+    teszthalozat();
 
-            for (int i = 0; i < 3  ; ++i) {
-                halozat[i].add(new invereter());
-            }
-            for (int i = 3; i <8 ; ++i) {
-                halozat[i].add(new forras());
-            }
-            halozat[8].add(new norgate(5));
-        }
+    ///Felépíti a teszt hálózatot
+    void felepit();
 
-void felepit(){
-    halozat[0].conn(halozat[7].get(),0);
-    halozat[1].conn(halozat[5].get(),0);
-    halozat[8].conn(halozat[3].get(),0);
-    halozat[8].conn(halozat[4].get(),1);
-    halozat[8].conn(halozat[0].get(),2);
-    halozat[8].conn(halozat[6].get(),3);
-    halozat[8].conn(halozat[1].get(),4);
-    halozat[2].conn(halozat[8].get(),0);
-}
-void start(){
-    felepit();
-    halozat[2].print();}
+    ///Kiírja a kimenetet
+    void start();
 
 
 
