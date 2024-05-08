@@ -5,7 +5,6 @@
 #ifndef ARAMKOR_UZENET_H
 #define ARAMKOR_UZENET_H
 #include "iostream"
-#include "memtrace.h"
 ///Üzenet osztály
 class uzenet {
     ///Value ha false=0 ha true=1

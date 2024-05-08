@@ -14,6 +14,20 @@ teszthalozat::teszthalozat() {
     }
     halozat[8].add(new norgate(5));         //1db norgate hozzáadása
 }
+
+teszthalozat::teszthalozat(int e, int d, int c, int b, int a) {
+    for (int i = 0; i < 3  ; ++i) {
+        halozat[i].add(new invereter());     //3db inverter hozzáadása
+    }
+    halozat[3].add(new forras(e));
+    halozat[4].add(new forras(d));
+    halozat[5].add(new forras(c));
+    halozat[6].add(new forras(b));
+    halozat[7].add(new forras(a));
+
+    halozat[8].add(new norgate(5));         //1db norgate hozzáadása
+}
+
 ///Csatlakoztatjuk az elemeket
 void teszthalozat::felepit() {
     halozat[0].conn(halozat[7].get(),0);
@@ -29,3 +43,7 @@ void teszthalozat::felepit() {
 void teszthalozat::start() {
     felepit();
     halozat[2].print();}
+
+bool teszthalozat::kimenet() {
+    return halozat[2].get()->out().getval();
+}

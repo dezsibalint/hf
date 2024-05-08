@@ -7,8 +7,8 @@
 
 #include "aramkorielem.h"
 #include "iostream"
-#include "memtrace.h"
 #include "stdexcept"
+
 ///Forrás osztály
 ///Kimenete beállítható 1re vagy 0ra felhasználó által
 class forras: public aramkorielem{

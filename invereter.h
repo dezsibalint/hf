@@ -5,7 +5,7 @@
 #ifndef ARAMKOR_INVERETER_H
 #define ARAMKOR_INVERETER_H
 #include "aramkorielem.h"
-#include "memtrace.h"
+
 ///Inverter osztály
 ///Egy db bemenete van,kimenetén a bemenet negált értékét adja vissza.
 class invereter: public aramkorielem{

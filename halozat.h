@@ -25,14 +25,13 @@ public:
     ///Csatlakoztatja az elemet
     ///@param kit: Csatlakoztatandó elem
     ///@param hova: Hanyas lábra csatlakoztassuk
-    void conn(aramkorielem *kit, int hova){
-        if(elem!=NULL&& elem->inputdb()>0) elem->connect(kit->out(),hova);
-    }
+    void conn(aramkorielem *kit, int hova);
+
     ///Kiírja az eleme be és kimenet(eit)
     void print()const {elem->print();}
 
     ///Destruktor, ha nem NULL az elem, akkor felszabadítja
-~halozatitarolo(){if(elem!=NULL)delete elem;}
+    ~halozatitarolo(){if(elem!=NULL)delete elem;}
 };
 
 

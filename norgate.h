@@ -5,7 +5,6 @@
 #ifndef ARAMKOR_NORGATE_H
 #define ARAMKOR_NORGATE_H
 #include "aramkorielem.h"
-#include "memtrace.h"
 ///Norgate osztály
 ///Nemvagy kapcsolatot valósít meg, felhasználó által megadott számú bemenettel.
 class norgate:public aramkorielem {

@@ -1,14 +1,14 @@
 #include <iostream>
+#include "gtest_lite.h"
 #include "aramkorielem.h"
 #include "forras.h"
 #include "vezetek.h"
 #include "norgate.h"
 #include "invereter.h"
 #include "teszthalozat.h"
-#include "memtrace.h"
 #include "halozat.h"
-#include "gtest_lite.h"
 #include "sstream"
+
 int main() {
 ///Teszt A
     //Forrás tesztjei
@@ -61,10 +61,10 @@ int main() {
 
     }ENDM
     //*********************************************************************************************************************//
-                                        //Későbbi tesztek még nincsenek készen.//
-    // *********************************************************************************************************************//
+    //                                    Későbbi tesztek még nincsenek készen.                                            //
+    // ********************************************************************************************************************//
     //Hálózati tároló tesztjei
-   /* halozatitarolo test[4];
+    halozatitarolo test[4];
     TEST(halozatitarolo,betesz){
 
         test[0].add(new forras(1));
@@ -87,13 +87,13 @@ int main() {
     }ENDM
 ///TesztB
 //Teszthélózat tesztjei.
-    teszthalozat th;
+    teszthalozat th(0,0,1,0,1);
     TEST(teszthalozat,felepit){
             EXPECT_NO_THROW(th.felepit()); //Hiba nélkül felépül-e?
 
     }ENDM
     TEST(teszthalozat,mukodes){
-
+            EXPECT_FALSE(th.kimenet());
     }ENDM
-*/
+
 }

@@ -9,8 +9,8 @@
 #include "forras.h"
 #include "norgate.h"
 #include "invereter.h"
-#include "memtrace.h"
 #include "halozat.h"
+
 ///Teszthálózat osztály, csak a heterogén tároló bemutatása miatt.
 ///@tparam meret: Tároló mérete,azaz hány db áramköri elemet tárolhat.
 ///@tparam halozat: Heterogén tároló, amely az áramköri elemeket tárolja.
@@ -24,8 +24,18 @@ public:
     ///Felépíti a teszt hálózatot
     void felepit();
 
+    ///Előre megadott értékkel helyezi be a forrásokat
+    //@param e: első változó
+    //@param d: második változó
+    //@param c: harmadik változó
+    //param b: negyedik változó
+    //@param a: ötödik változó
+    teszthalozat(int e,int d,int c,int b,int a);
+
     ///Kiírja a kimenetet
     void start();
+
+    bool kimenet();
 
 
 

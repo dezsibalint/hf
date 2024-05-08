@@ -5,7 +5,6 @@
 #ifndef ARAMKOR_VEZETEK_H
 #define ARAMKOR_VEZETEK_H
 #include "aramkorielem.h"
-#include "memtrace.h"
 
 ///Vezeték osztály
 ///Egyszerű a működése 1 bemenet 1 kimenet, ami a bemenetén van azt továbbítja a kimenetére.

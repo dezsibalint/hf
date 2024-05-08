@@ -4,9 +4,10 @@
 
 #ifndef ARAMKOR_ARAMKORIELEM_H
 #define ARAMKOR_ARAMKORIELEM_H
-#include "uzenet.h"
 #include "cstring"
+#include "uzenet.h"
 #include "memtrace.h"
+
 ///Absztrakt ősosztály
 ///@param nev Az áramkör elem neve
 ///@param bemenetekszama Bemenetek száma
