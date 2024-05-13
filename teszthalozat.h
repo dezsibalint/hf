@@ -12,10 +12,8 @@
 #include "halozat.h"
 
 ///Teszthálózat osztály, csak a heterogén tároló bemutatása miatt.
-///@tparam meret: Tároló mérete,azaz hány db áramköri elemet tárolhat.
 ///@tparam halozat: Heterogén tároló, amely az áramköri elemeket tárolja.
 class teszthalozat {
-    size_t meret=9;
     halozatitarolo halozat[9];
 public:
     ///konstruktor
@@ -25,17 +23,26 @@ public:
     void felepit();
 
     ///Előre megadott értékkel helyezi be a forrásokat
-    //@param e: első változó
-    //@param d: második változó
-    //@param c: harmadik változó
-    //param b: negyedik változó
-    //@param a: ötödik változó
+    ///@param e: első változó
+    ///@param d: második változó
+    ///@param c: harmadik változó
+    ///@param b: negyedik változó
+    ///@param a: ötödik változó
     teszthalozat(int e,int d,int c,int b,int a);
 
     ///Kiírja a kimenetet
     void start();
 
+    ///Visszaadja a hálózat kimenetét(utolsó hálózati elem kimenete)
     bool kimenet();
+
+    ///A hálózatban lévő források értékének utólagos beállítása.
+    ///@param e: első változó
+    ///@param d: második változó
+    ///@param c: harmadik változó
+    ///@param b: negyedik változó
+    ///@param a: ötödik változó
+    void setin(int e,int d,int c,int b,int a);
 
 
 

@@ -45,5 +45,14 @@ void teszthalozat::start() {
     halozat[2].print();}
 
 bool teszthalozat::kimenet() {
-    return halozat[2].get()->out().getval();
+    return halozat[2].get()->out().getval();    //A kimeneti inverter második helyen van a tárolónkban,így az ő kimenete kell.
+}
+
+void teszthalozat::setin(int e, int d, int c, int b, int a) {
+halozat[3].set(e);
+halozat[4].set(d);
+halozat[5].set(c);
+halozat[6].set(b);
+halozat[7].set(a);
+felepit();//Ha beállítottuk az új bemeneteket újra flépítjük.
 }

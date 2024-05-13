@@ -7,7 +7,7 @@
 #include "aramkorielem.h"
 ///Hálózat tároló osztály
 ///Heterogén kollekcióhoz,aramkorielem pointert tárol.
-///Belőlle lehet tömböt csinálni,közveteknül aramkorielem-ből nem,mert az absztakt osztály.
+///Belőlle lehet tömböt csinálni,közvetlenül aramkorielem-ből nem,mert az absztakt osztály.
 class halozatitarolo {
     aramkorielem* elem;
 public:
@@ -27,11 +27,15 @@ public:
     ///@param hova: Hanyas lábra csatlakoztassuk
     void conn(aramkorielem *kit, int hova);
 
-    ///Kiírja az eleme be és kimenet(eit)
-    void print()const {elem->print();}
+    ///Kiírja az eleme be és kimenet(eit) coutra
+    void print()const {std::cout<<"A hálózat kimenete: "<< elem->getout();}
 
-    ///Destruktor, ha nem NULL az elem, akkor felszabadítja
-    ~halozatitarolo(){if(elem!=NULL)delete elem;}
+    ///Tárolt elem kimenetének beállítása
+    ///@param val:Kimenet értéke.
+    void set(int val);
+
+    ///Destruktor
+    ~halozatitarolo(){delete elem;}
 };
 
 

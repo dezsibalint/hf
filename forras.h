@@ -21,8 +21,8 @@ public:
     forras(std::ostream &os=std::cout,std::istream &is=std::cin): aramkorielem(0,"Forras") {
         int be;
         os << "Bemenet:";
+        is>>be;
         if (be == 0 || be == 1) {//Typecheck
-            is>>be;
             uzenet ou;
             ou.setval(be);
             setout(ou);

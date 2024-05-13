@@ -7,7 +7,7 @@
 #include "invereter.h"
 #include "teszthalozat.h"
 #include "halozat.h"
-#include "sstream"
+#include "memtrace.h"
 
 int main() {
 ///Teszt A
@@ -60,9 +60,7 @@ int main() {
             EXPECT_FALSE(n.out().getval()); //Nemvagy kapcsolat értelmében a kimenet állapota 0 kell,hogy legyen.
 
     }ENDM
-    //*********************************************************************************************************************//
-    //                                    Későbbi tesztek még nincsenek készen.                                            //
-    // ********************************************************************************************************************//
+
     //Hálózati tároló tesztjei
     halozatitarolo test[4];
     TEST(halozatitarolo,betesz){
@@ -78,22 +76,92 @@ int main() {
                 EXPECT_STREQ("Norgate",test[3].get()->getnev());
 
     }ENDM
+
     TEST(halozatitarolo,mukodes){
-        test[1].conn(test[0].get(),0);
-        test[2].conn(test[1].get(),0);
-        test[3].conn(test[2].get(),0);
-        test[3].conn(test[0].get(),1);
+            test[1].conn(test[0].get(),0);
+            test[2].conn(test[1].get(),0);
+            test[3].conn(test[2].get(),0);
+            test[3].conn(test[0].get(),1);
             EXPECT_FALSE(test[3].get()->out().getval());// A hálózat végén 0 kell legyen.
-    }ENDM
+        }ENDM
+
+
 ///TesztB
-//Teszthélózat tesztjei.
+//Teszthálózat tesztjei.
     teszthalozat th(0,0,1,0,1);
     TEST(teszthalozat,felepit){
             EXPECT_NO_THROW(th.felepit()); //Hiba nélkül felépül-e?
 
     }ENDM
-    TEST(teszthalozat,mukodes){
+
+    TEST(teszthalozat,mukodes){//Hamisat várunk az igazságtábla alapján.
             EXPECT_FALSE(th.kimenet());
     }ENDM
 
+    TEST(teszthalozat,3random bemenetre){
+        int rand1=rand()%3;
+        int rand2=rand()%3;
+        int rand3=rand()%3;
+        int rand4=rand()%3;
+        th.setin(1,rand1,rand2,rand3,rand4);//Az egyik bemenetet fixáljuk,hogy véletlen nehogy pont azt a kombinációt kapjuk amire false kell legyen.
+                                                          //Nem túl szép megoldás.
+        EXPECT_TRUE(th.kimenet());
+
+        th.setin(rand4,1,rand3,rand2,rand1);
+        EXPECT_TRUE(th.kimenet());
+
+        th.setin(rand2,rand1,rand3,1,rand4);
+        EXPECT_TRUE(th.kimenet());
+
+    }ENDM
+
+///Test C
+
+    TEST(testc,teszt){
+//4Forrás és 2NOR kapu kapuból álló hálózatot
+        halozatitarolo ts[5];
+            for (int j = 0; j < 3; ++j) {
+                ts[j].add(new forras(0));//0 kezdőértékkel beletesszük,majd később kapnak értéket.
+            }
+            ts[3].add(new norgate(2));//2db 2 bementű norkapu.
+            ts[4].add(new norgate(2));
+
+            ts[0].set(0);//Források kapnak értéket
+            ts[1].set(0);
+            ts[2].set(0);
+
+            //Csatlakoztatjuk egymáshoz őket.
+            ts[3].conn(ts[0].get(),0);
+            ts[3].conn(ts[1].get(),1);
+            ts[4].conn(ts[2].get(),0);
+            ts[4].conn(ts[3].get(),1);
+
+            //Aktuál tesztek
+            //Források kimenetének tesztjei.
+            EXPECT_FALSE(ts[0].get()->getout().getval());
+            EXPECT_FALSE(ts[1].get()->getout().getval());
+            EXPECT_FALSE(ts[2].get()->getout().getval());
+            //Utánna input tesztek a 2 NOR kapu bemeneteinek inputjai.
+            EXPECT_FALSE(ts[3].get()->getinput(0).getval());
+            EXPECT_FALSE(ts[3].get()->getinput(1).getval());
+            EXPECT_FALSE(ts[4].get()->getinput(0).getval());
+            EXPECT_TRUE(ts[4].get()->getinput(1).getval());//Csak erre a bemenetre jön igaz az egyik norkapu kimentéről
+
+            //Kimenet tesztek(2 norkapunak, a 2.norkapu ts[4] az utolsó elem,ő a hálózat kimenete is
+            EXPECT_TRUE(ts[3].get()->getout().getval());//Ez az a bemnet
+            EXPECT_FALSE(ts[4].get()->getout().getval());
+    }ENDM
+
+    ///CINRŐL Felhasználó által megadható 1bemenetű hálózat ami minden bemenetre 0-át ad.
+    TEST(testc,felhasznalo){
+    forras f;
+    norgate nor(2);
+    invereter inv;
+    nor.connect(f.out(),0);
+    inv.connect(f.out());
+    nor.connect(inv.out(),1);
+    nor.print();
+    EXPECT_FALSE(nor.getout().getval());
+
+    }ENDM
 }
