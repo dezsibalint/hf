@@ -44,12 +44,6 @@ public:
     ///@param a: ötödik változó
     void setin(int e,int d,int c,int b,int a);
 
-
-
-
-
-
-
 };
 
 #endif //ARAMKOR_TESZTHALOZAT_H

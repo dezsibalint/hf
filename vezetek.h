@@ -15,7 +15,8 @@ public:
 
     ///Connect függvény
     ///@param mit Bemenet állapota
-   void connect(uzenet &mit);///Amint csatlakoztatjuk kiküldi a kimenetére azt ami a bemenetén van.
+    ///@paragram hova Így overrideolható,nincs jelentősége mert egy vezetéknek csak 1 bemenete van.
+   void connect(uzenet &mit,int hova=0)override;///Amint csatlakoztatjuk kiküldi a kimenetére azt ami a bemenetén van.
 
    ///Print függvény
    ///@param os Hova írjuk ki

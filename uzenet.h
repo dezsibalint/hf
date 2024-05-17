@@ -21,11 +21,13 @@ public:
     //Getter
     bool getval()const;
 
-    bool isdefined()const;///Be lett már állítva állapotba vagy még undefined
+    ///Be lett már állítva állapotba vagy még undefined
+    ///@return true ha már be lett állítva, false ha nem
+    bool isdefined()const;
 
-    uzenet&operator+(uzenet&rhs);
 
 };
+///Inserter operátor ostremre kiíráshoz.
 std::ostream &operator<<(std::ostream &os,const uzenet&ob);
 
 #endif //ARAMKOR_UZENET_H

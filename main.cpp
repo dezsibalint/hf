@@ -14,14 +14,14 @@ int main() {
     //Forrás tesztjei
     //Később is kell majd az a forrás ezért teszten kívűl hozzuk létre.
     forras a(1);
-    TEST(forras,create){
+   try{ TEST(forras,create){
             EXPECT_STREQ("Forras",a.getnev()); //Létrejött-e az objektum?,és a neve helyes?
             EXPECT_TRUE(a.out().getval()); //A beállított érték van a kimeneten?
     }ENDM
 
     TEST(forras,exeption){
            EXPECT_THROW(forras b('c'),std::invalid_argument&); //Érvénytelen bemenet tesztje
-    }ENDM
+    }ENDM} catch (std::errc){}
 
     //Vezeték tesztjei
     ///A vezetéket is fogjuk használni később ezért teszten kívűl hozzuk létre.
@@ -97,7 +97,7 @@ int main() {
 
 ///TesztB
 //Teszthálózat tesztjei.
-    teszthalozat th(0,0,1,0,1);
+   try{ teszthalozat th(0,0,1,0,1);
     TEST(teszthalozat,felepit){
             EXPECT_NO_THROW(th.felepit()); //Hiba nélkül felépül-e?
 
@@ -122,7 +122,7 @@ int main() {
         th.setin(rand2,rand1,rand3,1,rand4);
         EXPECT_TRUE(th.kimenet());
 
-    }ENDM
+    }ENDM} catch (std::errc){}
 
 ///Test C
 
@@ -162,15 +162,22 @@ int main() {
     }ENDM
 
     ///CINRŐL Felhasználó által megadható 1bemenetű hálózat ami minden bemenetre 0-át ad.
+    ///Csak a program bemutatása miatt.
     TEST(testc,felhasznalo){
     forras f;
     norgate nor(2);
     invereter inv;
+
+    ///Hálózat felépítése
+
     nor.connect(f.out(),0);
     inv.connect(f.out());
     nor.connect(inv.out(),1);
-    nor.print();
+
+    ///Minden bemenet esetére 0-át várunk.
     EXPECT_FALSE(nor.getout().getval());
 
+    ///Kiírjuk,csak a bemutatás miatt.
+    nor.print();
     }ENDM
 }
