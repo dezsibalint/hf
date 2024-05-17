@@ -62,8 +62,10 @@ int main() {
     }ENDM
 
     //Hálózati tároló tesztjei
-    halozatitarolo test[4];
+
+
     TEST(halozatitarolo,betesz){
+            halozatitarolo test[4];
 
         test[0].add(new forras(1));
         test[1].add(new vezetek);
@@ -75,9 +77,16 @@ int main() {
                 EXPECT_STREQ("Inverter",test[2].get()->getnev());
                 EXPECT_STREQ("Norgate",test[3].get()->getnev());
 
+
     }ENDM
 
     TEST(halozatitarolo,mukodes){
+            halozatitarolo test[4];
+            test[0].add(new forras(1));
+            test[1].add(new vezetek);
+            test[2].add(new invereter);
+            test[3].add(new norgate(2));
+
             test[1].conn(test[0].get(),0);
             test[2].conn(test[1].get(),0);
             test[3].conn(test[2].get(),0);

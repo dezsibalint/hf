@@ -35,7 +35,7 @@ public:
     void set(int val);
 
     ///Destruktor
-    ~halozatitarolo(){delete elem;}
+   ~halozatitarolo(){delete elem;}
 };
 
 
